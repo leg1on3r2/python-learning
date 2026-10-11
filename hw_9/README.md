@@ -11,7 +11,6 @@
 | `train_model.py` | обучение моделей, метрики, сохранение в `artifacts/` |
 | `predict.py` | получение предсказания — используется интерфейсом и из консоли |
 | `app.py` | интерфейс Streamlit |
-| `проверка.py` | проверка решения запуском: логика предсказания и сам интерфейс |
 | `artifacts/model.joblib` | модель, предсказывающая цену (1.9 МБ вместе с квантильными) |
 | `artifacts/quantile_low.joblib`, `artifacts/quantile_high.joblib` | модели 10-го и 90-го проценты цены для диапазона прогноза |
 | `artifacts/meta.json` | справочники городов, районов, координат и метрики |
@@ -35,12 +34,6 @@ python train_model.py
 
 ```bash
 python predict.py --square 56 --rooms 2 --floor 7 --city Москва --district "Тверской район"
-```
-
-Проверка решения:
-
-```bash
-python проверка.py
 ```
 
 ## Модель
